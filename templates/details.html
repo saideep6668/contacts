@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Contact Details</h1>
+<div class="card" action="/details">
+    <img src="{{ contacts[4] }}" class="card-img-top col-md-4" alt="{{ contacts.name }}">
+    <div class="card-body">
+        <h5 class="card-title">{{ contacts[1] }}</h5>
+        <p class="card-text"><strong>Email:</strong> {{ contacts[2] }}</p>
+        <p class="card-text"><strong>Phone:</strong> {{ contacts[3] }}</p>
+        <a href="/edit/{{ contacts[0] }}" class="btn btn-primary">Edit</a>
+        <a href="/delete/{{ contacts[0] }}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% endblock %}
